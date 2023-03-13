@@ -1,0 +1,9 @@
+mach create
+
+
+machine LoadPlatformDescription @/opt/renode/platforms/boards/arduino_nano_33_ble.repl
+
+sysbus LoadELF @/home/fred/Arduino/tflitebare/build/arduino.mbed_nano.nano33ble/tflitebare.ino.elf
+
+
+machine EnableProfiler @/home/fred/profiler6
