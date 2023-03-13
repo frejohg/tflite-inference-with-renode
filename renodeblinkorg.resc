@@ -1,0 +1,9 @@
+mach create
+
+
+machine LoadPlatformDescription @/opt/renode/platforms/boards/arduino_nano_33_ble.repl
+
+sysbus LoadELF @/home/fred/Arduino/blink_org/build/arduino.mbed_nano.nano33ble/blink_org.ino.elf
+sysbus LogAllPeripheralsAccess true
+
+machine EnableProfiler @/home/fred/profilerblinkorg

@@ -1,0 +1,11 @@
+mach create
+
+
+machine LoadPlatformDescription @/home/fred/appimages/renode_1.13.2_portable/platforms/boards/arduino_nano_33_ble.repl
+
+
+sysbus LoadELF @/home/fred/Arduino/hello_worldfj/build/arduino.mbed_nano.nano33ble/hello_worldfj.ino.elf
+
+machine EnableProfiler @/home/fred/hello_worldfj
+
+sysbus.cpu EnableProfiler CollapsedStack @/home/fred/hello_worldfj2
