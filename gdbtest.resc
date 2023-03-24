@@ -1,0 +1,9 @@
+mach create
+
+
+machine LoadPlatformDescription @/home/fred/appimages/renode_1.13.2_portable/platforms/boards/arduino_nano_33_ble.repl
+
+
+sysbus LoadELF @/home/fred/Arduino/gdbtest/build/arduino.mbed_nano.nano33ble/gdbtest.ino.elf
+
+machine StartGdbServer 3333 true

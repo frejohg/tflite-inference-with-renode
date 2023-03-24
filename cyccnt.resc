@@ -1,0 +1,8 @@
+mach create
+
+machine LoadPlatformDescription @/opt/renode/platforms/boards/arduino_nano_33_ble.repl
+
+machine StartGdbServer 3333 true
+sysbus LoadELF @/home/fred/Arduino/hello_world_cyccnt2/build/arduino.mbed_nano.nano33ble/hello_world_cyccnt2.ino.elf
+
+sysbus.cpu PerformanceInMips 29
